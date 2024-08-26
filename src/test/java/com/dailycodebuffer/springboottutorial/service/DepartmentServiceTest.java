@@ -15,7 +15,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 class DepartmentServiceTest {
 
-
     @Autowired
     private DepartmentService departmentService;
 
@@ -25,9 +24,7 @@ class DepartmentServiceTest {
     @BeforeEach
     void setUp() {
         Department department = Department.builder().departmentName("IT").departmentAddress("Mumbai").departmentCode("IT-06").departmentId(1L).build();
-
         Mockito.when(departmentRepository.findByDepartmentNameIgnoreCase("IT")).thenReturn(department);
-
     }
 
     @Test

@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.dailycodebuffer</groupId>
     <artifactId>Spring-Boot-Tutorial</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>Spring-Boot-Tutorial</name>
     <description>Spring-Boot-Tutorial</description>
     <url/>

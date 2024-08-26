@@ -1,0 +1,59 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: qa
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/spring_boot_restapi
+    password: root
+  application:
+    name: Spring-Boot-Tutorial
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to Spring Rest Api DevMode
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: qa
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/spring_boot_restapi_qa
+    password: root
+  application:
+    name: Spring-Boot-Tutorial
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to Spring Rest Api QA MODE
+
+
+#spring:
+#  datasource:
+#    driver-class-name: org.h2.Driver
+#    username: sa
+#    url: jdbc:h2:mem:dcbapp
+#    password: password
+#  h2:
+#    console:
+#      enabled: 'true'
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
